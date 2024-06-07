@@ -1,22 +1,22 @@
-
-import './App.css'
+// src/App.js
 
 function App() {
-
-
   return (
-    <>
-      
-      <h1>Vite + React</h1>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-    <button className="btn btn-outline">Default</button>
-<button className="btn btn-outline btn-primary">Primary</button>
-<button className="btn btn-outline btn-secondary">Secondary</button>
-<button className="btn btn-outline btn-accent">Accent</button>
-    </>
-  )
+    <div className="App">
+      <section id="home" className="h-screen bg-blue-100 flex items-center justify-center">
+        <h2 className="text-3xl">Home Section</h2>
+      </section>
+      <section id="about" className="h-screen bg-green-100 flex items-center justify-center">
+        <h2 className="text-3xl">About Section</h2>
+      </section>
+      <section id="services" className="h-screen bg-red-100 flex items-center justify-center">
+        <h2 className="text-3xl">Services Section</h2>
+      </section>
+      <section id="contact" className="h-screen bg-yellow-100 flex items-center justify-center">
+        <h2 className="text-3xl">Contact Section</h2>
+      </section>
+    </div>
+  );
 }
 
-export default App
+export default App;
