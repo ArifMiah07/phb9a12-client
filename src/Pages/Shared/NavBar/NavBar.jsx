@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+// import logo from '../../../../public/logo.png'
+import logo2 from '../../../../public/logo2.png'
+// import logo3 from '../../../../public/logo3.png'
+// import logo4 from '../../../../public/logo4.png'
+// import logo5 from '../../../../public/logo5.png'
 
 
 const NavBar = () => {
@@ -33,7 +38,7 @@ const NavBar = () => {
     </>
 
   return (
-    <nav className={`fixed w-full top-0 left-0 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg' : 'bg-transparent'}  navbar bg-base-100`}>
+    <nav className={`fixed z-10 w-full top-0 left-0 transition-all duration-300 ${scrolled ? 'bg-white shadow-lg' : 'bg-transparent'}  navbar bg-base-100`}>
         <div className="navbar-start">
             <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -43,7 +48,7 @@ const NavBar = () => {
                 {navLink}
             </ul>
             </div>
-            <a className={` btn btn-ghost text-2xl font-bold transition-all duration-300 ${scrolled ? 'text-4xl' : 'text-2xl'}`}>Survey Stream</a>
+            <a className={` btn btn-ghost text-2xl font-bold transition-all duration-300 ${scrolled ? 'text-4xl w-[220px] ' : 'w-[250px] text-2xl'}`}> <img className=" " src={logo2} alt="" /> </a>
         </div>
         <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
@@ -51,7 +56,7 @@ const NavBar = () => {
             </ul>
         </div>
         <div className="navbar-end">
-            <a className="btn">Button</a>
+            <Link to={'/login'}><button className="btn btn-outline btn-primary">Login</button></Link>
         </div>
     </nav>
   );
